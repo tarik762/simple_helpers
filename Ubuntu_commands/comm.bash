@@ -7,3 +7,7 @@ snap list --all | awk '/disabled/{print $1, $3}' |
     while read snapname revision; do
         snap remove "$snapname" --revision="$revision"
     done
+
+#Масове перейменування папок і файлів
+find -type d -exec chmod 755 {} \;
+find -type f -exec chmod 644 {} \; 
